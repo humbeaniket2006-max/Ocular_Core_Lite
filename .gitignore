@@ -1,0 +1,34 @@
+# --- Python Internals (Never upload these) ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environments (CRITICAL) ---
+# This prevents the 2GB library folder from being uploaded
+venv_ocular_lite/
+venv/
+env/
+.env
+
+# --- macOS System Files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Build & Distribution Artifacts ---
+# Since you are using src/ layout and pip install -e .
+build/
+dist/
+*.egg-info/
+src/*.egg-info/
+
+# --- IDE Settings (Optional) ---
+.vscode/
+.idea/
+
+# --- Large Model Checkpoints ---
+# (Optional) If you ever download heavy .safetensors locally
+*.safetensors
+*.bin
+*.ckpt

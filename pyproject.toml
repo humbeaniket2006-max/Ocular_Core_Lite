@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocular_core_lite"
+version = "0.1.0"
+description = "Edge-optimized synthetic biological texture generation for Intel CPUs"
+readme = "README.md"
+authors = [{ name = "Aniket Humbe", email = "humbeaniket2006@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    "torch==2.2.2",
+    "optimum==1.18.0",
+    "optimum-intel==1.16.0",
+    "diffusers==0.27.2",
+    "numpy<2.0",
+    "huggingface_hub==0.23.0",
+    "opencv-python-headless",
+    "pillow",
+    "scipy",
+    "transformers"
+]
+requires-python = ">=3.11"
+
+[project.urls]
+"Homepage" = "https://github.com/humbeaniket2006-max/Ocular_Core_Lite"
+
+# This creates command-line tools automatically!
+[project.scripts]
+ocular-generate = "ocular_core.generator:generate_iris"
+ocular-stress = "ocular_core.stress:stress_test"
